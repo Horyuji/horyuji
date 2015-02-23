@@ -1,0 +1,6 @@
+/client/jspm_packages
+/node_modules
+/doc
+/.tmp
+/report
+.DS_Store
