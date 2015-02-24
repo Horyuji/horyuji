@@ -99,6 +99,9 @@ gulp help
  + [coverage](https://github.com/Workiva/karma-jspm/issues/22)
  + [Aurelia Skeleton](https://github.com/aurelia/skeleton-navigation)
  + [フロント開発ツール群(frontend-stuff)](https://github.com/moklick/frontend-stuff)
+ + Dr. Axel Rauschmayer: ECMAScript 6 の使い方
+   + [パート１](https://www.youtube.com/watch?v=Fg3bEZIcnUw)
+   + [パート２](https://www.youtube.com/watch?v=Vhhq1WpzsnM)
  + gulp
    + [Gulp Delete files and folders](https://github.com/gulpjs/gulp/blob/master/docs/recipes/delete-files-folder.md)
    + [help](https://www.npmjs.com/package/gulp-help)
@@ -114,6 +117,12 @@ gulp help
    + [isparta(es6 covorage tool)](https://github.com/douglasduteil/isparta)
    + [istanbul](https://github.com/gotwarlost/istanbul)
    + [ismailia(old es6 covorage tool)](https://github.com/Spote/ismailia)
+ + Codeing
+   + [Effective transpiling of ES6](https://gist.github.com/rauchg/93d8b831e286bcb30d84)
+   + AngularJS
+     + [example](http://www.devbattles.com/en/sand/post-784-Writing+AngularJS+Apps+Using+ES6)
+     + [example](http://cameronjroe.com/code/http-status-codes/?utm_content=buffer98778&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer)
+
 
 ```sh
 # nodeのes6対応調べるコマンド
