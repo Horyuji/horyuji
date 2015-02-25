@@ -54,6 +54,7 @@ gulp help
 ### Roadmap
 
  + **Develop**
+    + [ ] JShint -> ESLint
     + [ ] ライブリロード開発
     + [ ] XHR Server Mock
       + [x] NodeJS
@@ -123,6 +124,12 @@ gulp help
      + [example](http://www.devbattles.com/en/sand/post-784-Writing+AngularJS+Apps+Using+ES6)
      + [example](http://cameronjroe.com/code/http-status-codes/?utm_content=buffer98778&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer)
 
+### Use reason
+
+ + gulp
+   + 求められるワークフロー、ツールがまだ未定なので、小回りのきくgulpに
+ + ESlint
+   + eslintのパーサー[esprima](https://github.com/jquery/esprima)が[ESTree](https://github.com/estree/estree)に参加してるから
 
 ```sh
 # nodeのes6対応調べるコマンド
