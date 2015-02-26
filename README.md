@@ -58,7 +58,7 @@ gulp help
       + [x] ESLint: gulp, e2e (protractor)
       + [x] JShint: unit test, application
         + [ ] JShintのクラス対応する。
-    + [ ] ライブリロード開発
+    + [x] ライブリロード開発
     + [ ] XHR Server Mock
       + [x] NodeJS
       + [ ] [Service Worker](https://github.com/slightlyoff/ServiceWorker)
@@ -71,7 +71,7 @@ gulp help
     + [ ] apiに対するテスト
  + **REPORT**
     + [x] covorage
-      + [ ] [jspm covorage][covorage report optimization](https://github.com/Workiva/karma-jspm/issues/22)
+      + [ ] [jspm covorage](https://github.com/Workiva/karma-jspm/issues/22)
       + [x] [isparta es6(6to5) covorage](https://github.com/douglasduteil/isparta)
       + [ ] [es6-istanbul](https://github.com/peterkc/es6-istanbul)
     + [ ] software metrix(plato)
