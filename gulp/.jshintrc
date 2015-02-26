@@ -2,6 +2,7 @@
   "esnext": false,
   "globals": {
     "require": true,
-    "setTimeout": true
+    "setTimeout": true,
+    "module": true
   }
 }

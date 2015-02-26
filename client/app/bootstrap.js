@@ -20,7 +20,7 @@ import imgFavicon from '../favicon.ico!image';
 * @module jquery
 * @constructor
 */
-export default class Bootstrap {
+ export default class Bootstrap {
 
   /**
   * Constractor metohd
@@ -32,7 +32,7 @@ export default class Bootstrap {
   constructor(){}
 
   /**
-  * My method description.  Like other pieces of your comment blocks, 
+  * My method description.  Like other pieces of your comment blocks,
   * this can span multiple lines.
   *
   * @method start
@@ -47,20 +47,20 @@ export default class Bootstrap {
     $('#app').append(`<ul id="lists"><li>${defaultMessage}</li></ul>`);
     $('#addbtn').click(()=>{
       $.ajax({
-          url : "http://localhost:8000/api/test",
-          dataType : 'json',
-          success : (data) => {
+          url: "http://localhost:8000/api/test",
+          dataType: 'json',
+          success: (data) => {
             $('#lists').append($('<li>')
               .addClass('messagelist')
               .addClass('js-message')
               .append($(imgFavicon).clone())
               .append(`${messageAnotate} : ${data.message}`));
-          }, error :(err) => {
+          },
+          error: (err) => {
             console.log("Data err: ", err);
           }
       });
     });
-
     $('#app').append(imgEs6);
   }
 
@@ -74,8 +74,10 @@ export default class Bootstrap {
   * @return {void 0} 戻り値なし
   */
   useArrows(array){
+    var ret = 0;
     array.forEach(v => {
-      console.log(v);
+      ret += v;
     });
+    return ret;
   }
 }

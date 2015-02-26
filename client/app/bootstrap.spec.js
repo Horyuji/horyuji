@@ -1,16 +1,20 @@
 /* jshint -W097 */
-'use strict';
 
 import Bootstrap from './bootstrap';
 
 describe('bootstrap.js test', () => {
+  'use strict';
+  var bootstrap = new Bootstrap();
 
   it('test one...', () => {
-    expect(1).to.be.ok;
+    expect(1).to.equal(1);
   });
 
   it('test tow...', () => {
-    let bootstrap = new Bootstrap();
-    expect(bootstrap).to.be.ok;
+    expect(bootstrap).to.not.equal({});
+  });
+
+  it('test useArrow', () => {
+    expect(bootstrap.useArrows([1, 2, 3])).to.equal(6);
   });
 });

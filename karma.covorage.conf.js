@@ -4,17 +4,22 @@ module.exports = function(config) {
   function normalizationBrowserName(browser) {
       return browser.toLowerCase().split(/[ /-]/)[0];
   }
-  var to5Options = require('./.6to5rc');
+  var babelOptions = require('./.babelrc');
   config.set({
     frameworks: ['mocha', 'chai', 'jspm'],
-    files: ['node_modules/6to5/browser-polyfill.js'],
+    files: ['node_modules/babel-core/browser-polyfill.js'],
     preprocessors: {
-      'client/app/**/*.spec.js': ['6to5'],
+      'client/app/**/*.spec.js': ['babel'],
       'client/app/**/!(*.spec).js': ['coverage']
     },
+
+    // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
+    //'Firefox', 'Chrome', 'PhantomJS'
+    browsers: ['Firefox'],
     reporters: ['progress', 'coverage'],
-    '6to5Preprocessor': {
-      options: to5Options
+    
+    babelPreprocessor: {
+      options: babelOptions
     },
 
     jspm: {
@@ -35,6 +40,7 @@ module.exports = function(config) {
     proxies: {
       '/base/jspm_packages/': '/base/client/jspm_packages/',
     },
+    
     coverageReporter: {
       // configure the reporter to use isparta for JavaScript coverage
       instrumenters: { isparta : require('isparta') },
@@ -43,7 +49,7 @@ module.exports = function(config) {
       },
 
       instrumenterOptions: {
-        isparta: { to5 : to5Options }
+        isparta: { babel : babelOptions }
       },
 
       reporters: [
@@ -69,9 +75,6 @@ module.exports = function(config) {
     // level of logging
     // possible values: config.LOG_DISABLE || config.LOG_ERROR || config.LOG_WARN || config.LOG_INFO || config.LOG_DEBUG
     logLevel: config.LOG_INFO,
-    // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    //'Firefox', 'Chrome', 'PhantomJS'
-    browsers: ['Firefox'],
 
     singleRun: true,
 

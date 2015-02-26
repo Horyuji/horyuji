@@ -1,4 +1,5 @@
-describe('protractor sample',()=> {
+describe('protractor sample', ()=> {
+  'use strict';
 
   it('reading.fxos homepage', ()=> {
     browser.get('http://reading.fxos.org');
@@ -32,5 +33,4 @@ describe('protractor sample',()=> {
       expect(serverMsg.getText()).toEqual('Get To : hello express server');
     });
   });
-
 });

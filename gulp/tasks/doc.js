@@ -15,7 +15,7 @@ gulp.task('doc:open', ['browser-sync:doc']);
 
 gulp.task('doc', ['doc:gen', 'doc:open']);
 
-gulp.task('doc:test', ['doc'],function(){
-  process.exit();
-});
-
+// PENDING: Don't use process.exit(); throw an error instead
+// gulp.task('doc:test', ['doc'], function(){
+//   process.exit();
+// });

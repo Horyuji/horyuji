@@ -1,14 +1,14 @@
 jspmプロジェクト雛形
 ----
 
-JSフレームワーク非依存のプロジェクトテンプレート
+ES Next なフレームワーク非依存のプロジェクトテンプレート
 
 | Project | status |
 | ------ | ------ |
-| Build Status ||
-| Code Climate ||
-| Dependency Status ||
-| Application Covoiturage ||
+| Build Status |[![Build Status](https://travis-ci.org/MSakamaki/GJBoT.svg)](https://travis-ci.org/MSakamaki/GJBoT)|
+| Code Climate |[![Code Climate](https://codeclimate.com/github/MSakamaki/GJBoT/badges/gpa.svg)](https://codeclimate.com/github/MSakamaki/GJBoT)|
+| Dependency Status |[![Dependency Status](https://gemnasium.com/MSakamaki/GJBoT.svg)](https://gemnasium.com/MSakamaki/GJBoT)|
+| Application Covoiturage |[![Test Coverage](https://codeclimate.com/github/MSakamaki/GJBoT/badges/coverage.svg)](https://codeclimate.com/github/MSakamaki/GJBoT)|
 
 ### Get Started
 
@@ -54,34 +54,39 @@ gulp help
 ### Roadmap
 
  + **Develop**
-    + [ ] JShint -> ESLint
+    + [x] JShint -> ESLint
+      + [x] ESLint: gulp, e2e (protractor)
+      + [x] JShint: unit test, application
+        + [ ] JShintのクラス対応する。
     + [ ] ライブリロード開発
     + [ ] XHR Server Mock
       + [x] NodeJS
-      + [ ] [Service Worker Polyfill](https://github.com/phuu/ServiceWorker-Polyfill)
+      + [ ] [Service Worker](https://github.com/slightlyoff/ServiceWorker)
  + **DOCUMENT** [yuidoc](http://yui.github.io/yuidoc/)
-    + [ ] ドキュメントを作成＆表示(ライブリロード作成)
-    + [ ] ドキュメントを作成
+    + [x] ドキュメントを作成＆表示(ライブリロード作成)
+    + [x] ドキュメントを作成
  + **TEST**
-    + [ ] karmaの実行
-    + [ ] End to End Test
+    + [x] karmaの実行
+    + [x] End to End Test
     + [ ] apiに対するテスト
  + **REPORT**
-    + [ ] covorage
+    + [x] covorage
       + [ ] [jspm covorage][covorage report optimization](https://github.com/Workiva/karma-jspm/issues/22)
-      + [ ] [isparta es6(6to5) covorage](https://github.com/douglasduteil/isparta)
+      + [x] [isparta es6(6to5) covorage](https://github.com/douglasduteil/isparta)
+      + [ ] [es6-istanbul](https://github.com/peterkc/es6-istanbul)
     + [ ] software metrix(plato)
       + [ ] [plato](https://github.com/es-analysis/plato/issues/127)
+      + [ ] [es6-plato](https://github.com/peterkc/es6-plato)
  + **BUILD**
     + [ ] build task
     + [ ] altJS対応
-    + [ ] cssプリプロセッサ系(sass/less)
+    + [ ] cssプリプロセッサ系(sass/less/styless)
     + [ ] minify
  + **OPTION**
-   + [ ] 環境別動作
-     + [ ] `--env=unit` 単体テスト用の設定ファイルを使う
-     + [ ] `--env=it` 結合テスト用の設定ファイルを使う
-     + [ ] `--env=releace` リリース用の設定ファイルを使う
+   + [ ] 環境別に振る舞いを切り替える
+     + [ ] 単体テスト用の設定
+     + [ ] 結合テスト用の設定
+     + [ ] リリース用の設定
  + cross platform
    + [ ] Firefox OS アプリ対応
      + [ ] Firefox OSエミュレータ起動
@@ -100,9 +105,14 @@ gulp help
  + [coverage](https://github.com/Workiva/karma-jspm/issues/22)
  + [Aurelia Skeleton](https://github.com/aurelia/skeleton-navigation)
  + [フロント開発ツール群(frontend-stuff)](https://github.com/moklick/frontend-stuff)
+ + [edit config](http://editorconfig.org/)
  + Dr. Axel Rauschmayer: ECMAScript 6 の使い方
    + [パート１](https://www.youtube.com/watch?v=Fg3bEZIcnUw)
    + [パート２](https://www.youtube.com/watch?v=Vhhq1WpzsnM)
+ + eslint
+   + [configuring](http://eslint.org/docs/configuring/)
+   + [rules](http://eslint.org/docs/rules/)
+   + [ES6 features](https://github.com/eslint/espree/issues/10)
  + gulp
    + [Gulp Delete files and folders](https://github.com/gulpjs/gulp/blob/master/docs/recipes/delete-files-folder.md)
    + [help](https://www.npmjs.com/package/gulp-help)
@@ -129,7 +139,9 @@ gulp help
  + gulp
    + 求められるワークフロー、ツールがまだ未定なので、小回りのきくgulpに
  + ESlint
-   + eslintのパーサー[esprima](https://github.com/jquery/esprima)が[ESTree](https://github.com/estree/estree)に参加してるから
+   + 静的解析いいよね・・・
+   + eslintのパーサー[espree](https://github.com/eslint/espree)のフォークもと[esprima](https://github.com/jquery/esprima)が[ESTree](https://github.com/estree/estree)に参加してる
+   + `import`, `class`が使えないのは待ちか・・・
 
 ```sh
 # nodeのes6対応調べるコマンド

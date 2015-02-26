@@ -9,6 +9,7 @@ gulp.task('serve', [
   'express:dev'
 ]);
 
-gulp.task('serve:test', ['serve'],function(){
-  process.exit();
-});
+// Don't use process.exit(); throw an error instead
+// gulp.task('serve:test', ['serve'], function(){
+//   process.exit();
+// });

@@ -2,7 +2,7 @@ language: node_js
 node_js:
   - 0.10
 env:
-  CODECLIMATE_REPO_TOKEN=63c3fda700cd462c18dfd8787b032668d4a4242fe25b5962505222e77994ab1e
+  CODECLIMATE_REPO_TOKEN=76ae1cab98a6bcabf07d65439fe3b3c10dea4651add93dc551e8f816c192d455
 before_script:
   - npm i -g gulp jspm codeclimate-test-reporter 
   - npm i

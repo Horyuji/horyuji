@@ -5,7 +5,7 @@ var gulp = require('gulp');
 var del = require('del');
 var config = require('../gulp.config');
 
-gulp.task('clean', ['clean:e2e','clean:doc','clean:fxos']);
+gulp.task('clean', ['clean:e2e', 'clean:doc', 'clean:fxos']);
 
 gulp.task('clean:e2e', function (cb) {
   del([
