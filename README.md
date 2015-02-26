@@ -139,9 +139,8 @@ gulp help
  + gulp
    + 求められるワークフロー、ツールがまだ未定なので、小回りのきくgulpに
  + ESlint
-   + 静的解析いいよね・・・
+   + 静的解析
    + eslintのパーサー[espree](https://github.com/eslint/espree)のフォークもと[esprima](https://github.com/jquery/esprima)が[ESTree](https://github.com/estree/estree)に参加してる
-   + `import`, `class`が使えないのは待ちか・・・
 
 ```sh
 # nodeのes6対応調べるコマンド
