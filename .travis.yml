@@ -17,6 +17,4 @@ before_script:
   - gulp test:e2e
   - gulp report:ci
   - cat report/lcov/firefox/lcov.info |  codeclimate
-  - gulp doc:test
-  - gulp serve:test
 
