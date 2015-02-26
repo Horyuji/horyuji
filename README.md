@@ -71,7 +71,7 @@ gulp help
     + [ ] apiに対するテスト
  + **REPORT**
     + [x] covorage
-      + [ ] [jspm covorage](https://github.com/Workiva/karma-jspm/issues/22)
+      + [ ] [jspm covorage]g(https://github.com/Workiva/karma-jspm/issues/22)
       + [x] [isparta es6(6to5) covorage](https://github.com/douglasduteil/isparta)
       + [ ] [es6-istanbul](https://github.com/peterkc/es6-istanbul)
     + [ ] software metrix(plato)
