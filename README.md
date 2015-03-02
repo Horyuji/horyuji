@@ -79,7 +79,10 @@ gulp help
       + [ ] [es6-plato](https://github.com/peterkc/es6-plato)
  + **BUILD**
     + [ ] build task
-    + [ ] altJS対応
+    + altJS + jspm
+      + [ ] [TypeScript](http://www.typescriptlang.org/)
+      + [ ] atScript
+      + [ ] [JSX](http://facebook.github.io/jsx/)
     + [ ] cssプリプロセッサ系(sass/less/styless)
     + [ ] minify
  + **OPTION**
@@ -105,6 +108,7 @@ gulp help
  + [coverage](https://github.com/Workiva/karma-jspm/issues/22)
  + [Aurelia Skeleton](https://github.com/aurelia/skeleton-navigation)
  + [フロント開発ツール群(frontend-stuff)](https://github.com/moklick/frontend-stuff)
+ + [フロントエンドガイドライン](https://github.com/bendc/frontend-guidelines)
  + [edit config](http://editorconfig.org/)
  + Dr. Axel Rauschmayer: ECMAScript 6 の使い方
    + [パート１](https://www.youtube.com/watch?v=Fg3bEZIcnUw)
@@ -121,6 +125,7 @@ gulp help
    + [SublimeText ES6 Syntax](https://packagecontrol.io/packages/JavaScriptNext%20-%20ES6%20Syntax)
    + [babeljs--6to5-- Features](https://babeljs.io/docs/learn-es6/)
    + [traceur Features](https://github.com/google/traceur-compiler/wiki/LanguageFeatures)
+   + [ES6の判りやすい解説](http://ilikekillnerds.com/2015/02/a-guide-to-es6-classes/)
  + firefox os
    + [node firefox os](http://nicola.github.io/node-fxos/)
    + [node firefox client](https://github.com/harthur/firefox-client)
