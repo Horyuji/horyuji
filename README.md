@@ -62,6 +62,7 @@ gulp help
     + [ ] XHR Server Mock
       + [x] NodeJS
       + [ ] [Service Worker](https://github.com/slightlyoff/ServiceWorker)
+      + [ ] [nock(評価中)](https://github.com/pgte/nock)
  + **DOCUMENT** [yuidoc](http://yui.github.io/yuidoc/)
     + [x] ドキュメントを作成＆表示(ライブリロード作成)
     + [x] ドキュメントを作成
@@ -82,9 +83,12 @@ gulp help
     + altJS + jspm
       + [ ] [TypeScript](http://www.typescriptlang.org/)
       + [ ] atScript
-      + [ ] [JSX](http://facebook.github.io/jsx/)
+      + [x] [JSX](http://facebook.github.io/jsx/)
     + [ ] cssプリプロセッサ系(sass/less/styless)
-    + [ ] minify
+    + minify
+      + [ ] [JSPM bundle options](https://github.com/jspm/jspm-cli/wiki/Production-Workflows#creating-a-self-executing-bundle)
+    + Bundle
+      + [ ] [Bundle for JSPM](https://github.com/jspm/jspm-cli/wiki/Production-Workflows)
  + **OPTION**
    + [ ] 環境別に振る舞いを切り替える
      + [ ] 単体テスト用の設定
@@ -121,11 +125,14 @@ gulp help
    + [Gulp Delete files and folders](https://github.com/gulpjs/gulp/blob/master/docs/recipes/delete-files-folder.md)
    + [help](https://www.npmjs.com/package/gulp-help)
  + ES6
+   + [ECMA-262 6th Draft](https://people.mozilla.org/~jorendorff/es6-draft.html#)
    + [ES6 features](https://github.com/lukehoban/es6features)
    + [SublimeText ES6 Syntax](https://packagecontrol.io/packages/JavaScriptNext%20-%20ES6%20Syntax)
    + [babeljs--6to5-- Features](https://babeljs.io/docs/learn-es6/)
    + [traceur Features](https://github.com/google/traceur-compiler/wiki/LanguageFeatures)
    + [ES6の判りやすい解説](http://ilikekillnerds.com/2015/02/a-guide-to-es6-classes/)
+   + [ECMAScript 6 modules](http://www.2ality.com/2014/09/es6-modules-final.html)
+   + [Whatwg Module Loader](http://whatwg.github.io/loader/#reflect-loader-import)
  + firefox os
    + [node firefox os](http://nicola.github.io/node-fxos/)
    + [node firefox client](https://github.com/harthur/firefox-client)
@@ -147,10 +154,7 @@ gulp help
    + 静的解析
    + eslintのパーサー[espree](https://github.com/eslint/espree)のフォークもと[esprima](https://github.com/jquery/esprima)が[ESTree](https://github.com/estree/estree)に参加してる
 
-```sh
-# nodeのes6対応調べるコマンド
-nodebrew exec v0.11.14 node --v8-options | grep harmony
 
-#ES6ベースのnode v.0.11.*を使う場合(例：nodebrewを使用する場合)
-nodebrew exec v0.11.14 node --harmony node_modules/.bin/gulp
-```
+### JSPM Thips
+
+

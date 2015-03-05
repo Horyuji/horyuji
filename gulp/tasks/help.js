@@ -14,7 +14,7 @@
       return ret;
     },
     rightPad: function(taskName, len){
-      return (taskName + pad).substring(0, len) ;
+      return (taskName + pad).substring(0, len);
     },
     mainTaskList: function(){
       return Object.keys(gulp.tasks).sort();

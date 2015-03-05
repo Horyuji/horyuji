@@ -13,7 +13,7 @@ exports.config = {
     browser.ignoreSynchronization = true;
   },
   // add proper version number
-  seleniumServerJar: './node_modules/protractor/selenium/selenium-server-standalone-2.44.0.jar',
+  seleniumServerJar: './node_modules/protractor/selenium/selenium-server-standalone-2.45.0.jar',
 
   // A base URL for your application under test. Calls to protractor.get()
   // with relative paths will be prepended with this.
