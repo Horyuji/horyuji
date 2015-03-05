@@ -158,3 +158,20 @@ gulp help
 ### JSPM Thips
 
 
+#### No main entry point detected
+
+```sh
+warn No main entry point detected for [リポジトリ名].
+     Try adding an override, or set the package.json "main": false if this is the intention.
+```
+
+jspmにて上記のようなエラー(mainエントリポイント)が見つからないようなモジュールをインストールする場合は以下のように設定が必要
+
+```sh
+
+jspm install [モジュール名]=[リポジトリ] -o "{ main: '[対象JSファイルパス]'}"
+
+jspm install angular-ui-router -o "{ main: 'angular-ui-router', "angular-ui-router": {"deps": ["angular"] } }"
+
+```
+
