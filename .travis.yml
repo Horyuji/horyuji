@@ -1,12 +1,8 @@
 language: node_js
 node_js:
   - "0.10"
-  - "0.11"
   - "0.12"
   - "iojs"
-  - "iojs-v1.3"
-  - "iojs-v1.4"
-  - "iojs-v1.5"
 before_script:
   - npm i -g gulp jspm codeclimate-test-reporter coveralls
   - npm i
