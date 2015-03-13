@@ -48,7 +48,6 @@
       var padnum = taskGetter.maxTaxkNameLength();
       var tsk = gulp.tasks[taskName];
       var task = taskGetter.rightPad(taskName, padnum);
-      
       if (!tsk){
         console.log(colors.red.bold.underline(task),
           colors.red.bold('No task given! remove description to gulp/taskDescription.json'));
