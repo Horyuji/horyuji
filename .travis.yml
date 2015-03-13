@@ -1,8 +1,7 @@
 language: node_js
 node_js:
   - 0.10
-env:
-  CODECLIMATE_REPO_TOKEN=76ae1cab98a6bcabf07d65439fe3b3c10dea4651add93dc551e8f816c192d455
+  - 0.11
 before_script:
   - npm i -g gulp jspm codeclimate-test-reporter 
   - npm i
@@ -16,5 +15,5 @@ before_script:
   - gulp test:unit
   - gulp test:e2e
   - gulp report:ci
-  - cat report/lcov/firefox/lcov.info |  codeclimate
+  - cat report/lcov/firefox/lcov.info | node_modules/.bin/coveralls 
 

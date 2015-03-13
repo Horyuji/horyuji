@@ -1,14 +1,14 @@
-jspmプロジェクト雛形
+HORYUJI
 ----
 
 ES Next なフレームワーク非依存のプロジェクトテンプレート
 
 | Project | status |
 | ------ | ------ |
-| Build Status |[![Build Status](https://travis-ci.org/MSakamaki/GJBoT.svg)](https://travis-ci.org/MSakamaki/GJBoT)|
+| Build Status |[![Build Status](https://travis-ci.org/Horyuji/horyuji.svg)](https://travis-ci.org/Horyuji/horyuji)|
 | Code Climate |[![Code Climate](https://codeclimate.com/github/Horyuji/horyuji/badges/gpa.svg)](https://codeclimate.com/github/Horyuji/horyuji)|
-| Dependency Status |[![Dependency Status](https://gemnasium.com/MSakamaki/GJBoT.svg)](https://gemnasium.com/MSakamaki/GJBoT)|
-| Application Covoiturage |[![Test Coverage](https://codeclimate.com/github/MSakamaki/GJBoT/badges/coverage.svg)](https://codeclimate.com/github/MSakamaki/GJBoT)|
+| Dependency Status |[![Dependency Status](https://gemnasium.com/Horyuji/horyuji.svg)](https://gemnasium.com/MSakamaki/GJBoT)|
+| Application Covoiturage |[![Coverage Status](https://coveralls.io/repos/Horyuji/horyuji/badge.svg?branch=master)](https://coveralls.io/r/Horyuji/horyuji?branch=master)|
 
 ### Get Started
 
