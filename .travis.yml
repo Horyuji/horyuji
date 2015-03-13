@@ -11,7 +11,7 @@ before_script:
   - jspm dl-loader --traceur
   - gulp test:unit
   - gulp test:e2e
-  - jspm dl-loader --6to5
+  - jspm dl-loader --Babel
   - gulp test:unit
   - gulp test:e2e
   - gulp report:ci
