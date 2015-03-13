@@ -1,10 +1,13 @@
 HORYUJI
 ----
 
+
+
 ES Next なフレームワーク非依存のプロジェクトテンプレート
 
 | Project | status |
 | ------ | ------ |
+|Gitter Channel|[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/Horyuji/horyuji?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)|
 | Build Status |[![Build Status](https://travis-ci.org/Horyuji/horyuji.svg)](https://travis-ci.org/Horyuji/horyuji)|
 | Code Climate |[![Code Climate](https://codeclimate.com/github/Horyuji/horyuji/badges/gpa.svg)](https://codeclimate.com/github/Horyuji/horyuji)|
 | Dependency Status |[![Dependency Status](https://gemnasium.com/Horyuji/horyuji.svg)](https://gemnasium.com/MSakamaki/GJBoT)|
