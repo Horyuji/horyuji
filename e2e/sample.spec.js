@@ -30,7 +30,7 @@ describe('protractor sample', ()=> {
         return serverMsg.isPresent();
       }, 10000, 'no search message');
     }).then(()=>{
-      expect(serverMsg.getText()).toEqual('Get To : hello express server');
+      expect(serverMsg.getText()).toEqual('Get To : foo');
     });
   });
 });

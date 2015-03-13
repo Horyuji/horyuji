@@ -47,14 +47,14 @@ import imgFavicon from '../favicon.ico!image';
     $('#app').append(`<ul id="lists"><li>${defaultMessage}</li></ul>`);
     $('#addbtn').click(()=>{
       $.ajax({
-          url: "http://localhost:8000/api/test",
+          url: "http://localhost:8000/api/sample",
           dataType: 'json',
           success: (data) => {
             $('#lists').append($('<li>')
               .addClass('messagelist')
               .addClass('js-message')
               .append($(imgFavicon).clone())
-              .append(`${messageAnotate} : ${data.message}`));
+              .append(`${messageAnotate} : ${data[0].name}`));
           },
           error: (err) => {
             console.log("Data err: ", err);

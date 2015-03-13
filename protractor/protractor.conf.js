@@ -13,7 +13,8 @@ exports.config = {
     browser.ignoreSynchronization = true;
   },
   // add proper version number
-  seleniumServerJar: './node_modules/protractor/selenium/selenium-server-standalone-2.45.0.jar',
+  // use command : node_modules/.bin/webdriver-manager update
+  seleniumServerJar: '../node_modules/protractor/selenium/selenium-server-standalone-2.45.0.jar',
 
   // A base URL for your application under test. Calls to protractor.get()
   // with relative paths will be prepended with this.
@@ -21,7 +22,7 @@ exports.config = {
 
   // If true, only chromedriver will be started, not a standalone selenium.
   // Tests for browsers other than chrome will not run.
-  chromeOnly: true,
+  chromeOnly: false,
 
   // list of files / patterns to load in the browser
   specs: [
