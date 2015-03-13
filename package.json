@@ -45,7 +45,5 @@
     "require-dir": "^0.1.0",
     "systemjs": "^0.14.1"
   },
-  "dependencies": {
-    "coveralls": "^2.11.2"
-  }
+  "dependencies": {}
 }

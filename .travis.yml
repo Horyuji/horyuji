@@ -3,7 +3,7 @@ node_js:
   - 0.10
   - 0.11
 before_script:
-  - npm i -g gulp jspm codeclimate-test-reporter 
+  - npm i -g gulp jspm codeclimate-test-reporter coveralls
   - npm i
   - jspm i
   - export DISPLAY=:99.0
@@ -15,5 +15,5 @@ before_script:
   - gulp test:unit
   - gulp test:e2e
   - gulp report:ci
-  - cat report/lcov/firefox/lcov.info | node_modules/.bin/coveralls 
+  - cat report/lcov/firefox/lcov.info | coveralls 
 
