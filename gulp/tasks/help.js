@@ -20,7 +20,7 @@
       return Object.keys(gulp.tasks).sort();
     },
     descriptionList: function(){
-      return Object.keys(gulp.tasks).sort();
+      return Object.keys(taskDiscript.description).sort();
     },
     dependencyTaskList: function(taskName){
       var subTasks = [];
@@ -43,6 +43,16 @@
         console.log(colors.red.bold.underline(task),
           colors.red.bold('No description given! add description to gulp/taskDescription.json'));
       }
+    },
+    unDescriptionMsg: function(taskName){
+      var padnum = taskGetter.maxTaxkNameLength();
+      var tsk = gulp.tasks[taskName];
+      var task = taskGetter.rightPad(taskName, padnum);
+      
+      if (!tsk){
+        console.log(colors.red.bold.underline(task),
+          colors.red.bold('No task given! remove description to gulp/taskDescription.json'));
+      }
     }
   };
 
@@ -61,6 +71,9 @@
     console.log(colors.blue.bold(' === All Task === '));
     taskGetter.mainTaskList().forEach(function(taskName){
       taskGetter.descriptionMsg(taskName);
+    });
+    taskGetter.descriptionList().forEach(function(taskName){
+      taskGetter.unDescriptionMsg(taskName);
     });
   });
 

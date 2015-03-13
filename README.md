@@ -20,8 +20,8 @@ ES Next なフレームワーク非依存のプロジェクトテンプレート
 # jspmをグローバルインストール
 npm install -g jspm
 
-git clone https://github.com/MSakamaki/GJBoT
-cd GJBoT
+git clone https://github.com/Horyuji/horyuji.git
+cd horyuji
 
 npm install
 jspm install
@@ -85,7 +85,6 @@ gulp help
     + [ ] build task
     + altJS + jspm
       + [ ] [TypeScript](http://www.typescriptlang.org/)
-      + [ ] atScript
       + [x] [JSX](http://facebook.github.io/jsx/)
     + [ ] cssプリプロセッサ系(sass/less/styless)
     + minify
