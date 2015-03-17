@@ -39,7 +39,6 @@
     "report":"レポートを作成し、出力します",
     "report:ci":"codeclimate連携レポート出力コマンド",
     "eslint": "execute eslint",
-    "jshint": "execute jshint",
     "webdriverStandalone": "protractor webdriver standalone command",
     "webdriverUpdate": "protractor webdriver update"
   }

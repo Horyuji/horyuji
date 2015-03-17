@@ -3,10 +3,8 @@
 
 var gulp = require('gulp');
 var eslint = require('gulp-eslint');
-var jshint = require('gulp-jshint');
 
-gulp.task('lint', ['eslint', 'jshint']);
-
+gulp.task('lint', ['eslint']);
 
 gulp.task('eslint', function() {
   return gulp.src([
@@ -17,12 +15,4 @@ gulp.task('eslint', function() {
     .pipe(eslint())
     .pipe(eslint.format())
     .pipe(eslint.failOnError());
-});
-
-gulp.task('jshint', function() {
-  return gulp.src([
-    'client/app/**/*.js'
-    ])
-    .pipe(jshint())
-    .pipe(jshint.reporter('default'));
 });
