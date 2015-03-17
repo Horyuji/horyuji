@@ -4,15 +4,15 @@
   var gulpDep = require('gulp-description');
   var taskDiscript = require('../taskDescription.json');
 
-  gulp.task('help',function(){
+  gulp.task('help', function(){
     gulpDep.help(taskDiscript);
   });
 
-  gulp.task('h:list',function(){
+  gulp.task('h:list', function(){
     gulpDep.all(taskDiscript);
   });
 
-  gulp.task('h:dep',function(){
+  gulp.task('h:dep', function(){
     gulpDep.dependency(taskDiscript);
   });
 })();
