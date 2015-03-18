@@ -5,6 +5,7 @@ node_js:
   - "iojs"
 before_script:
   - npm i -g gulp jspm codeclimate-test-reporter coveralls
+  - node_modules/.bin/webdriver-manager  update
   - npm i
   - jspm i
   - node_modules/.bin/webdriver-manager update
