@@ -177,3 +177,14 @@ jspm install angular-ui-router -o "{ main: 'angular-ui-router', "angular-ui-rout
 
 ```
 
+npm依存性チェック
+
+` npm-check-updates`を使う
+
+```sh
+# チェック
+npm-check-updates
+# npmのアップデート
+npm-check-updates -u
+```
+
