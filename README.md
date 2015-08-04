@@ -183,8 +183,10 @@ npm依存性チェック
 
 ```sh
 # チェック
-npm-check-updates
+ncu 
 # npmのアップデート
-npm-check-updates -u
+ncu -u
+# グローバルのアップデート
+ncu -g | grep -G '^ ' | cut  -d ' ' -f2 | npm -v 'npm' | npm install -g
 ```
 
