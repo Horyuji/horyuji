@@ -85,6 +85,7 @@ gulp help
     + [ ] build task
     + altJS + jspm
       + [ ] [TypeScript](http://www.typescriptlang.org/)
+        + [ ] https://github.com/frankwallis/plugin-typescript  
       + [x] [JSX](http://facebook.github.io/jsx/)
     + [ ] cssプリプロセッサ系(sass/less/styless)
     + minify
