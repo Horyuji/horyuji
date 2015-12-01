@@ -1,8 +1,0 @@
-{
-  "esnext": false,
-  "globals": {
-    "require": true,
-    "setTimeout": true,
-    "module": true
-  }
-}
