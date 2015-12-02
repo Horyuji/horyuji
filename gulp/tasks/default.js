@@ -1,3 +1,3 @@
 const gulp = require('gulp');
 
-gulp.task('default', ()=> console.log('Hello Default Task'));
+gulp.task('default', ()=> gulp.log('Hello Default Task'));
