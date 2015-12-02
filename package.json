@@ -1,51 +1,19 @@
 {
-  "jspm": {
-    "directories": {
-      "baseURL": "client",
-      "lib": "app",
-      "packages": "client/jspm_packages"
-    },
-    "dependencies": {
-      "css": "github:systemjs/plugin-css@^0.1.6",
-      "image": "github:systemjs/plugin-image@^0.1.0",
-      "jquery": "github:components/jquery@^2.1.3"
-    }
+  "name": "horyuji",
+  "version": "1.0.0",
+  "description": "TODO: Write a project description",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "devDependencies": {
-    "babel": "^5.4.7",
-    "body-parser": "^1.12.4",
-    "browser-sync": "^2.7.5",
-    "chai": "^2.3.0",
-    "chalk": "^1.0.0",
-    "del": "^1.2.0",
-    "express": "^4.12.4",
-    "gulp": "^3.8.11",
-    "gulp-babel": "^5.1.0",
-    "gulp-description": "0.0.4",
-    "gulp-eslint": "^0.12.0",
-    "gulp-jshint": "^1.11.0",
-    "gulp-jslint": "^0.2.2",
-    "gulp-load-plugins": "^0.10.0",
-    "gulp-nodemon": "^2.0.3",
-    "gulp-protractor": "1.0.0",
-    "gulp-traceur": "^0.17.1",
-    "gulp-yuidoc": "^0.1.2",
-    "isparta": "git://github.com/douglasduteil/isparta",
-    "istanbul": "^0.3.14",
-    "karma": "^0.12.33",
-    "karma-babel-preprocessor": "^5.2.1",
-    "karma-chai": "^0.1.0",
-    "karma-chrome-launcher": "^0.1.12",
-    "karma-coverage": "git://github.com/douglasduteil/karma-coverage#next",
-    "karma-firefox-launcher": "^0.1.6",
-    "karma-jspm": "^1.1.5",
-    "karma-mocha": "^0.1.10",
-    "karma-phantomjs-launcher": "^0.1.4",
-    "karma-sinon-chai": "^0.3.0",
-    "mocha": "^2.2.5",
-    "protractor": "^2.1.0",
-    "require-dir": "^0.3.0",
-    "systemjs": "^0.16.11"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Horyuji/horyuji.git"
   },
-  "dependencies": {}
+  "author": "Horyuji team and other contributors",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Horyuji/horyuji/issues"
+  },
+  "homepage": "https://github.com/Horyuji/horyuji#readme"
 }
