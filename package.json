@@ -15,5 +15,12 @@
   "bugs": {
     "url": "https://github.com/Horyuji/horyuji/issues"
   },
-  "homepage": "https://github.com/Horyuji/horyuji#readme"
+  "homepage": "https://github.com/Horyuji/horyuji#readme",
+  "devDependencies": {
+    "babel-core": "^6.2.1",
+    "babel-preset-es2015": "^6.1.18",
+    "gulp": "^3.9.0",
+    "gulp-load-plugins": "^1.1.0",
+    "require-dir": "^0.3.0"
+  }
 }
