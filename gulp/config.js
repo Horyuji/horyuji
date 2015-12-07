@@ -3,6 +3,7 @@ const ROOT_DIRS = {
   src: './src',
   report: './report',
   tmp: './.tmp',
+  release: './dist',
 };
 
 const PATHS = {
@@ -10,7 +11,9 @@ const PATHS = {
     src: [
       `${ROOT_DIRS.src}/**/!(*spec|*mock).js`,
     ],
-    watch: []
+    watch: [
+      `${ROOT_DIRS.src}/**/!(*spec|*mock).js`,
+    ]
   },
   test: {
     src: [

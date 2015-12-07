@@ -1,0 +1,18 @@
+{
+  "name": "horyuji",
+  "description": "TODO: Write a project description",
+  "main": "index.js",
+  "authors": [
+    "Horyuji team and other contributors"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/Horyuji/horyuji",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
