@@ -21,6 +21,14 @@ const PATHS = {
   report: {
     coverage: `${ROOT_DIRS.report}/coverage`,
   },
+  html: {
+    src: [
+      `${ROOT_DIRS.src}/**/*.html`,
+    ],
+    watch: [
+      `${ROOT_DIRS.src}/**/*.html`,
+    ],
+  },
 };
 
 module.exports = {
