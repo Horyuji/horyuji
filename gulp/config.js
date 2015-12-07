@@ -1,7 +1,6 @@
 // プロジェクトのフォルダ類
 const ROOT_DIRS = {
   src: './src',
-  test: './test',
   report: './report',
   tmp: './.tmp',
 };
@@ -9,13 +8,13 @@ const ROOT_DIRS = {
 const PATHS = {
   script: {
     src: [
-      `${ROOT_DIRS.src}/scripts/**/*.js`,
+      `${ROOT_DIRS.src}/**/!(*spec|*mock).js`,
     ],
     watch: []
   },
   test: {
     src: [
-      `${ROOT_DIRS.test}/**/*.js`,
+      `${ROOT_DIRS.src}/**/(*spec|*mock).js`,
     ],
     watch: []
   },

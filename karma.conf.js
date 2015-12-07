@@ -33,8 +33,8 @@ module.exports = function(karmaConfig) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
-      '/src/scripts/**/*.js': ['babel', 'coverage'],
-      '/test/**/*.js': ['babel'],
+      'src/scripts/**/!(*spec|*mock).js': ['babel', 'coverage'],
+      'src/scripts/**/(*spec|*mock).js': ['babel'],
     },
 
 
