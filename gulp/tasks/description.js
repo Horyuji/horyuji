@@ -4,8 +4,10 @@ const gulpDep = require('gulp-description');
 let description = {
   "main":[
     "help",
+    "help:all",
     "watch",
     "test",
+    "build",
   ],
   "description":{
     "default" : "ヘルプを表示します",
@@ -16,6 +18,11 @@ let description = {
     "report:coverage" : "単体テスト結果よりカバレッジを出力します",
     "test" : "karmaによる単体テストを実行します",
     "watch": "ライブリロード開発を開始します",
+    "build": "リリース用のビルドを行い、./distフォルダに配備します",
+    "js:build":"javascriptのビルドタスクです、jscs/eslint後babelによるビルドを行います。",
+    "babel:build":"コードチェック後にbabelコンパイルを行い./distフォルダに配備します",
+    "jscs":"jscsによるコードチェックを実行します、fixは行いません",
+    "eslint":"eslintによるコードチェックを実行します",
   }
 };
 

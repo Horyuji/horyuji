@@ -3,6 +3,7 @@ const ROOT_DIRS = {
   src: './src',
   report: './report',
   tmp: './.tmp',
+  dist: './dist',
 };
 
 const PATHS = {
