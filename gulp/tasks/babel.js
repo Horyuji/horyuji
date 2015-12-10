@@ -8,12 +8,7 @@ gulp.task('babel:build', ['jscs', 'eslint'],
   ()=> gulp.src(config.paths.script.src)
     .pipe(sourcemaps.init())
     .pipe(babel({
-      presets: ['es2015']
+      presets: ['es2015'],
     }))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(config.rootDirs.dist)));
-
-
-
-
-
