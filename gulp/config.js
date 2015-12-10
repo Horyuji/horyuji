@@ -1,22 +1,29 @@
 // プロジェクトのフォルダ類
 const ROOT_DIRS = {
-  src: './src',
+  dist: './dist',
+  gulp: './gulp',
   report: './report',
+  src: './src',
   tmp: './.tmp',
 };
 
 const PATHS = {
+  gulp: {
+    src: [
+      `${ROOT_DIRS.gulp}/**/*.js`,
+    ],
+  },
   script: {
     src: [
       `${ROOT_DIRS.src}/**/!(*spec|*mock).js`,
     ],
-    watch: []
+    watch: [],
   },
   test: {
     src: [
       `${ROOT_DIRS.src}/**/(*spec|*mock).js`,
     ],
-    watch: []
+    watch: [],
   },
   report: {
     coverage: `${ROOT_DIRS.report}/coverage`,

@@ -40,4 +40,5 @@ node_modules
 /.tmp
 /report
 /docs
+/dist
 bower_components
