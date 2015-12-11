@@ -45,4 +45,7 @@ module.exports = {
   env: process.env.NODE_ENV || 'dev',
   rootDirs: ROOT_DIRS,
   paths: PATHS,
+  port: {
+    dev: 9000,
+  },
 };
