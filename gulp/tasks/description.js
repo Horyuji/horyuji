@@ -27,6 +27,7 @@ const description = {
     eslint: 'eslintによるコードチェックを実行します',
     'eslint:gulp': 'gulpタスクのeslintによるコードチェックを実行します',
     self: 'gulpタスクの自己チェックを行います',
+    bower: 'bower.jsonの依存関係をチェックして、*.htmlの中身を自動的に更新します',
   },
 };
 
