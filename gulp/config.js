@@ -36,6 +36,9 @@ const PATHS = {
       `${ROOT_DIRS.src}/**/*.html`,
     ],
   },
+  bower: {
+    watch: 'bower.json',
+  },
 };
 
 module.exports = {
