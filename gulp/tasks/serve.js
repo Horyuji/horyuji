@@ -7,7 +7,6 @@ const runSequence = require('run-sequence');
 // TODO ここにjs、cssなどの事前タスクをセットすること
 // gulp.task('serve', ['js', 'style'], () => {
 gulp.task('serve', () => {
-
   browserSync.init({
     notify: false,
     port: config.port.dev,
@@ -23,5 +22,4 @@ gulp.task('serve', () => {
   }, () => {
     runSequence('watch');
   });
-
 });
