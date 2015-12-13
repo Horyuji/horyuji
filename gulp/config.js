@@ -42,7 +42,21 @@ const PATHS = {
   bower: {
     watch: 'bower.json',
   },
+  css: {
+    src: [
+      `${ROOT_DIRS.src}/**/*.css`,
+    ],
+    watch: [
+      `${ROOT_DIRS.src}/**/*.css`,
+    ],
+  },
 };
+
+const SUPPORT_BROWERS = [
+  'last 3 version',
+  'ie >= 9',
+  'Android 4.0',
+];
 
 module.exports = {
   env: process.env.NODE_ENV || 'dev',
@@ -50,5 +64,38 @@ module.exports = {
   paths: PATHS,
   port: {
     dev: 9000,
+  },
+
+  //
+  // plugin settings
+  //
+
+  autoprefixer: {
+    options: {
+      browsers: SUPPORT_BROWERS,
+    },
+  },
+  doiuse: {
+    options: {
+      browsers: SUPPORT_BROWERS,
+    },
+  },
+  stylelint: {
+    options: {},
+  },
+  csswring: {
+    options: {
+
+      // https://github.com/hail2u/node-csswring#preservehacks
+      preserveHacks: true,
+
+      // https://github.com/hail2u/node-csswring#removeallcomments
+      removeAllComments: true,
+    },
+  },
+  'postcss-reporter': {
+    options: {
+      clearMessages: true,
+    },
   },
 };
