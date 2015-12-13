@@ -12,6 +12,9 @@ const PATHS = {
     src: [
       `${ROOT_DIRS.gulp}/**/*.js`,
     ],
+    watch: [
+      `${ROOT_DIRS.gulp}/**/*.js`,
+    ],
   },
   script: {
     src: [
