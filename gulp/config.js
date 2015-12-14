@@ -12,6 +12,9 @@ const PATHS = {
     src: [
       `${ROOT_DIRS.gulp}/**/*.js`,
     ],
+    watch: [
+      `${ROOT_DIRS.gulp}/**/*.js`,
+    ],
   },
   script: {
     src: [
@@ -45,4 +48,7 @@ module.exports = {
   env: process.env.NODE_ENV || 'dev',
   rootDirs: ROOT_DIRS,
   paths: PATHS,
+  port: {
+    dev: 9000,
+  },
 };

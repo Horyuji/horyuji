@@ -5,6 +5,7 @@ const description = {
   main: [
     'help',
     'help:all',
+    'serve',
     'watch',
     'test',
     'build',
@@ -17,6 +18,7 @@ const description = {
     'help:dep': 'コマンド毎の依存性を表示します',
     html: 'htmlファイルのビルド処理を行います',
     'report:coverage': '単体テスト結果よりカバレッジを出力します',
+    serve: '開発用Webサーバーを起動します',
     test: 'karmaによる単体テストを実行します',
     watch: 'ライブリロード開発を開始します',
     build: 'リリース用のビルドを行い、./distフォルダに配備します',
