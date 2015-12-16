@@ -63,9 +63,9 @@ const BROWSER_SYNC = {
     notify: true,
     port: PORT.dev,
     files: [
-      `${ROOT_DIRS.tmp}/**/*.js`,
-      `${ROOT_DIRS.tmp}/**/*.css`,
-      `${ROOT_DIRS.src}/**/*.html`,
+      '**/*.js',
+      '**/*.css',
+      '**/*.html',
     ],
     server: {
       baseDir: [
