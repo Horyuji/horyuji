@@ -1,3 +1,7 @@
+const PORT = {
+  dev: 9000,
+};
+
 // プロジェクトのフォルダ類
 const ROOT_DIRS = {
   dist: './dist',
@@ -18,13 +22,15 @@ const PATHS = {
   },
   script: {
     src: [
-      `${ROOT_DIRS.src}/**/!(*spec|*mock).js`,
+      `${ROOT_DIRS.src}/**/!(*spec|*mock).es6`,
     ],
-    watch: [],
+    watch: [
+      `${ROOT_DIRS.src}/**/!(*spec|*mock).es6`,
+    ],
   },
   test: {
     src: [
-      `${ROOT_DIRS.src}/**/(*spec|*mock).js`,
+      `${ROOT_DIRS.src}/**/(*spec|*mock).es6`,
     ],
     watch: [],
   },
@@ -44,11 +50,39 @@ const PATHS = {
   },
   css: {
     src: [
-      `${ROOT_DIRS.src}/**/*.css`,
+      `${ROOT_DIRS.src}/**/*.pcss`,
     ],
     watch: [
+      `${ROOT_DIRS.src}/**/*.pcss`,
+    ],
+  },
+};
+
+const BROWSER_SYNC = {
+  dev: {
+    notify: true,
+    port: PORT.dev,
+    files: [
+      `${ROOT_DIRS.tmp}/**/*.js`,
+      `${ROOT_DIRS.src}/**/*.html`,
       `${ROOT_DIRS.src}/**/*.css`,
     ],
+    server: {
+      baseDir: [
+        ROOT_DIRS.src,
+        ROOT_DIRS.tmp,
+      ],
+      routes: {
+        '/bower_components': 'bower_components',
+      },
+    },
+  },
+  report: {
+    server: {
+      baseDir: `${PATHS.report.coverage}`,
+      port: 9001,
+      directory: true,
+    },
   },
 };
 
@@ -62,8 +96,9 @@ module.exports = {
   env: process.env.NODE_ENV || 'dev',
   rootDirs: ROOT_DIRS,
   paths: PATHS,
+  browserSync: BROWSER_SYNC,
   port: {
-    dev: 9000,
+    dev: PORT.dev,
   },
 
   //

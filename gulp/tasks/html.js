@@ -3,7 +3,7 @@ const gulp = require('gulp');
 const config = require('../config');
 const plumber = require('gulp-plumber');
 
-const browserSync = require('browser-sync');
+const browserSync = require('browser-sync').create();
 const htmlhint = require('gulp-htmlhint');
 
 gulp.task('html', () => {
@@ -13,7 +13,5 @@ gulp.task('html', () => {
     .pipe(htmlhint.reporter())
     .pipe(htmlhint.failReporter())
     .pipe(gulp.dest(`${config.rootDirs.tmp}`))
-    .on('end', () => {
-      browserSync.reload();
-    });
+    .on('end', () => browserSync.reload);
 });
