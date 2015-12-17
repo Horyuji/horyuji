@@ -4,8 +4,7 @@
   "description": "TODO: Write a project description",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"skip test command\" && exit 0",
-    "postinstall": "bower install"
+    "test": "echo \"skip test command\" && exit 0"
   },
   "repository": {
     "type": "git",
