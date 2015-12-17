@@ -2,8 +2,10 @@ const config = require('../config');
 
 const gulp = require('gulp');
 const plumber = require('gulp-plumber');
-const browserSync = require('browser-sync');
 const postcss = require('gulp-postcss');
+const rename = require('gulp-rename');
+
+const browserSync = require('browser-sync');
 
 const postCssPlugins = {
   dev: [
@@ -22,19 +24,21 @@ const postCssPlugins = {
   ],
 };
 
-gulp.task('style:dev', () => {
-  gulp.src(config.paths.css.src)
+gulp.task('style:dev', () => gulp.src(config.paths.css.src)
     .pipe(plumber())
     .pipe(postcss(postCssPlugins.dev))
-    .pipe(gulp.dest(`${config.rootDirs.src}`))
-    .pipe(browserSync.stream());
-});
+    .pipe(rename({
+      extname: '.css',
+    }))
+    .pipe(gulp.dest(`${config.rootDirs.tmp}`))
+    .pipe(browserSync.get(config.browserSync.namespace.dev).stream()));
 
-gulp.task('style:build', () => {
-  gulp.src(config.paths.css.src)
+gulp.task('style:build', () => gulp.src(config.paths.css.src)
     .pipe(plumber())
     .pipe(postcss(postCssPlugins.build))
 
     // TODO ここでHeaderを追加
-    .pipe(gulp.dest(`${config.rootDirs.dist}`));
-});
+    .pipe(rename({
+      extname: '.css',
+    }))
+    .pipe(gulp.dest(`${config.rootDirs.dist}`)));

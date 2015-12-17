@@ -22,17 +22,20 @@ const description = {
     test: 'karmaによる単体テストを実行します',
     watch: 'ライブリロード開発を開始します',
     build: 'リリース用のビルドを行い、./distフォルダに配備します',
-    'js:build': 'javascriptのビルドタスクです、jscs/eslint後babelによるビルドを行います。',
+    'babel:dev': '開発(livereload)用のビルドを行います',
+    'js:build': 'javascriptのビルドタスクです、jscs/eslint後babelによるビルドを行います',
     'babel:build': 'コードチェック後にbabelコンパイルを行い./distフォルダに配備します',
     jscs: 'jscsによるコードチェックを実行します、fixは行いません',
     'jscs:gulp': 'gulpタスクのjscsコードチェックを実行します',
     eslint: 'eslintによるコードチェックを実行します',
     'eslint:gulp': 'gulpタスクのeslintによるコードチェックを実行します',
     self: 'gulpタスクの自己チェックを行います',
+    'style:dev': '開発(livereload)用のPostCSSのビルドを行います',
+    'style:build': 'リリース用のPostCSSのビルドを行います',
     bower: 'bower.jsonの依存関係をチェックして、*.htmlの中身を自動的に更新します',
   },
 };
 
-gulp.task('help', ()=> gulpDep.help(description));
-gulp.task('help:all', ()=> gulpDep.all(description));
-gulp.task('help:dep', ()=> gulpDep.dependency(description));
+gulp.task('help', () => gulpDep.help(description));
+gulp.task('help:all', () => gulpDep.all(description));
+gulp.task('help:dep', () => gulpDep.dependency(description));
