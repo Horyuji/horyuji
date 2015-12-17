@@ -59,6 +59,10 @@ const PATHS = {
 };
 
 const BROWSER_SYNC = {
+  namespace: {
+    dev: 'livereload',
+    report: 'report',
+  },
   dev: {
     notify: true,
     port: PORT.dev,

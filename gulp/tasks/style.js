@@ -5,7 +5,7 @@ const plumber = require('gulp-plumber');
 const postcss = require('gulp-postcss');
 const rename = require('gulp-rename');
 
-let browserSync = require('browser-sync');
+const browserSync = require('browser-sync');
 
 const postCssPlugins = {
   dev: [
@@ -31,7 +31,7 @@ gulp.task('style:dev', () => gulp.src(config.paths.css.src)
       extname: '.css',
     }))
     .pipe(gulp.dest(`${config.rootDirs.tmp}`))
-    .pipe(browserSync.get('livereload').stream()));
+    .pipe(browserSync.get(config.browserSync.namespace.dev).stream()));
 
 gulp.task('style:build', () => gulp.src(config.paths.css.src)
     .pipe(plumber())
