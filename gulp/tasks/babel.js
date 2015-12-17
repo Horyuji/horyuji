@@ -14,7 +14,7 @@ gulp.task('babel:dev', ['jscs', 'eslint'], () => gulp.src(config.paths.script.sr
   }))
   .pipe(sourcemaps.write('.'))
   .pipe(gulp.dest(config.rootDirs.tmp))
-  .pipe(browserSync.get(config.namespace.dev).stream()));
+  .pipe(browserSync.get(config.browserSync.namespace.dev).stream()));
 
 gulp.task('babel:build', ['jscs', 'eslint'], () => gulp.src(config.paths.script.src)
   .pipe(stripDebug())
