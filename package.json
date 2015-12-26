@@ -33,6 +33,7 @@
     "gulp-description": "0.0.4",
     "gulp-eslint": "^1.1.1",
     "gulp-htmlhint": "^0.3.0",
+    "gulp-inject": "^3.0.0",
     "gulp-jscs": "^3.0.2",
     "gulp-load-plugins": "^1.1.0",
     "gulp-plumber": "^1.0.1",
