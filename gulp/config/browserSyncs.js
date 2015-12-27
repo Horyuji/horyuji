@@ -11,9 +11,9 @@ const BROWSER_SYNC = {
     notify: true,
     port: PORTS.dev,
     files: [
-      '**/*.js',
-      '**/*.css',
-      '**/*.html',
+      /** match pattern : https://github.com/es128/anymatch  */
+      new RegExp(`${ROOT_DIRS.src}/*\.html`),
+      new RegExp(`${ROOT_DIRS.tmp}/*\.(js|css|html)`),
     ],
     server: {
       baseDir: [
