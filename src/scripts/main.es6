@@ -1,3 +1,4 @@
+
 class Comment {
   constructor(name) {
     this.name = name;
@@ -8,6 +9,4 @@ class Comment {
   }
 }
 
-const comment = new Comment('Jhone');
-
-document.querySelector('.contents').innerHTML = `${comment.show()} Start Application`;
+$('.contents').text(`${new Comment('Jhone').show()} Start Application`);

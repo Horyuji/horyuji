@@ -20,6 +20,7 @@ const description = {
     'report:coverage': '単体テスト結果よりカバレッジを出力します',
     serve: '開発用Webサーバーを起動します',
     test: 'karmaによる単体テストを実行します',
+    'test:watch': 'libereload用のkarmaを実行します',
     watch: 'ライブリロード開発を開始します',
     build: 'リリース用のビルドを行い、./distフォルダに配備します',
     'babel:dev': '開発(livereload)用のビルドを行います',

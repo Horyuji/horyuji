@@ -1,109 +1,15 @@
-const PORT = {
-  dev: 9000,
-};
-
-// プロジェクトのフォルダ類
-const ROOT_DIRS = {
-  dist: './dist',
-  gulp: './gulp',
-  report: './report',
-  src: './src',
-  tmp: './.tmp',
-};
-
-const PATHS = {
-  gulp: {
-    src: [
-      `${ROOT_DIRS.gulp}/**/*.js`,
-    ],
-    watch: [
-      `${ROOT_DIRS.gulp}/**/*.js`,
-    ],
-  },
-  script: {
-    src: [
-      `${ROOT_DIRS.src}/**/!(*spec|*mock).es6`,
-    ],
-    watch: [
-      `${ROOT_DIRS.src}/**/!(*spec|*mock).es6`,
-    ],
-  },
-  test: {
-    src: [
-      `${ROOT_DIRS.src}/**/(*spec|*mock).es6`,
-    ],
-    watch: [],
-  },
-  report: {
-    coverage: `${ROOT_DIRS.report}/coverage`,
-  },
-  html: {
-    src: [
-      `${ROOT_DIRS.src}/**/*.html`,
-    ],
-    watch: [
-      `${ROOT_DIRS.src}/**/*.html`,
-    ],
-  },
-  bower: {
-    watch: 'bower.json',
-  },
-  css: {
-    src: [
-      `${ROOT_DIRS.src}/**/*.pcss`,
-    ],
-    watch: [
-      `${ROOT_DIRS.src}/**/*.pcss`,
-    ],
-  },
-};
-
-const BROWSER_SYNC = {
-  namespace: {
-    dev: 'livereload',
-    report: 'report',
-  },
-  dev: {
-    notify: true,
-    port: PORT.dev,
-    files: [
-      '**/*.js',
-      '**/*.css',
-      '**/*.html',
-    ],
-    server: {
-      baseDir: [
-        ROOT_DIRS.src,
-        ROOT_DIRS.tmp,
-      ],
-      routes: {
-        '/bower_components': 'bower_components',
-      },
-    },
-  },
-  report: {
-    server: {
-      baseDir: `${PATHS.report.coverage}`,
-      port: 9001,
-      directory: true,
-    },
-  },
-};
-
-const SUPPORT_BROWERS = [
-  'last 3 version',
-  'ie >= 9',
-  'Android 4.0',
-];
+import ROOT_DIRS        from './config/rootDirs';
+import PATHS            from './config/paths';
+import BROWSER_SYNC     from './config/browserSyncs';
+import SUPPORT_BROWSERS from './config/supportBrowsers';
+import PORTS            from './config/ports';
 
 module.exports = {
   env: process.env.NODE_ENV || 'dev',
   rootDirs: ROOT_DIRS,
   paths: PATHS,
   browserSync: BROWSER_SYNC,
-  port: {
-    dev: PORT.dev,
-  },
+  port: PORTS,
 
   //
   // plugin settings
@@ -111,12 +17,12 @@ module.exports = {
 
   autoprefixer: {
     options: {
-      browsers: SUPPORT_BROWERS,
+      browsers: SUPPORT_BROWSERS,
     },
   },
   doiuse: {
     options: {
-      browsers: SUPPORT_BROWERS,
+      browsers: SUPPORT_BROWSERS,
     },
   },
   stylelint: {
