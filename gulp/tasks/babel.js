@@ -23,4 +23,4 @@ gulp.task('babel:build', ['jscs', 'eslint'], () => gulp.src(config.paths.script.
     presets: ['es2015'],
   }))
   .pipe(sourcemaps.write('.'))
-  .pipe(gulp.dest(config.rootDirs.dist)));
+  .pipe(gulp.dest(config.rootDirs.tmp)));
