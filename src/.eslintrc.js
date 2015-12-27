@@ -2,13 +2,10 @@ module.exports = {
   "root": true,
   "env": {
     "browser": true,
-    "node": true,
+    "node": false,
     "es6": true
   },
   "ecmaFeatures": {
     "modules": true
-  },
-  "rules": {
-    "prefer-const": 0,
   },
 };

@@ -9,3 +9,12 @@ gulp.task('test', () => {
   });
   server.start();
 });
+
+gulp.task('test:watch', () => {
+  const server = new Server({
+    configFile: process.cwd() + '/karma.conf.js',
+    singleRun: false,
+    autoWatch: true,
+  });
+  server.start();
+});

@@ -20,9 +20,11 @@ module.exports = function(karmaConfig) {
 
 
     // list of files / patterns to load in the browser
+    // match pattern : http://karma-runner.github.io/0.13/config/files.html
     files: [
-      `${config.paths.script.src}`,
-      `${config.paths.test.src}`,
+      {pattern: './bower_components/jquery/dist/jquery.js', watched: false},
+      {pattern: './bower_components/bootstrap/dist/js/bootstrap.js', watched: false},
+      {pattern: `${config.rootDirs.src}/**/*.es6`, watched: true},
     ],
 
 
@@ -33,8 +35,8 @@ module.exports = function(karmaConfig) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
-      'src/scripts/**/!(*spec|*mock).js': ['babel', 'coverage'],
-      'src/scripts/**/(*spec|*mock).js': ['babel'],
+      [config.paths.script.src]: ['babel', 'coverage'],
+      [config.paths.test.src]: ['babel'],
     },
 
 
@@ -52,7 +54,7 @@ module.exports = function(karmaConfig) {
         isparta: require('isparta')
       },
       instrumenter: {
-        '**/*.js': 'isparta'
+        '**/*.es6': 'isparta',
       },
       instrumenterOptions: {
         isparta: {},
@@ -60,11 +62,13 @@ module.exports = function(karmaConfig) {
       reporters: [{
         type: 'text',
         subdir: normalizationBrowserName,
-      }, {
+      }
+      /* 落ちるので一時的にコメントアウト
+      *, {
         type: 'html',
-        dir: `${config.paths.report.coverage}`,
+        dir: config.paths.report.coverage,
         subdir: normalizationBrowserName,
-      }],
+      }*/],
     },
 
 
@@ -87,7 +91,8 @@ module.exports = function(karmaConfig) {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['Chrome'],
+    /* browser prefix : 'Chrome', 'Firefox', 'Safari', 'PhantomJS', 'Firefox'*/
+    browsers: ['Firefox'],
 
 
     // Continuous Integration mode
