@@ -1,4 +1,5 @@
-const cwd = process.cwd() ;
+const cwd = process.cwd();
+
 const ROOT_DIRS = {
   dist: `${cwd}/dist`,
   gulp: `${cwd}/gulp`,
