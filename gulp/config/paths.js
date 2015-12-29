@@ -45,6 +45,11 @@ const PATHS = {
       `${ROOT_DIRS.src}/**/*.pcss`,
     ],
   },
+  image: {
+    src: [
+      `${ROOT_DIRS.src}/assets/**`,
+    ],
+  },
 };
 
 export { PATHS as default };
