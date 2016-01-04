@@ -10,9 +10,8 @@ const revReplace = require('gulp-rev-replace');
 const postcss = require('gulp-postcss');
 
 gulp.task('build', cb => {
-  // TODO imageタスク
   runSequence(
-    'clean:build', ['html:build', 'js:build', 'style:build', 'extras:build'],
+    'clean:build', ['html:build', 'js:build', 'style:build', 'image:build', 'extras:build'],
     'inject',
     'bower',
     'build:client',
@@ -22,6 +21,7 @@ gulp.task('build', cb => {
 
 gulp.task('build:client', () => {
 
+  const manifest = gulp.src(`${config.rootDirs.tmp}/rev-manifest.json`);
   const jsFilter = filter('**/*.js', {
     restore: true,
   });
@@ -54,7 +54,7 @@ gulp.task('build:client', () => {
     .pipe(htmlExcludeFilter)
     .pipe(rev())
     .pipe(htmlExcludeFilter.restore)
-    .pipe(revReplace())
+    .pipe(revReplace({manifest: manifest}))
     .pipe(gulp.dest(config.rootDirs.dist));
 
 });

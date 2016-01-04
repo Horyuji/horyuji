@@ -4,30 +4,32 @@
 <head>
   <meta charset="UTF-8">
   <title>Document</title>
-  <!--build:css styles/vendor.min.css -->
+  <!-- build:css styles/vendor.min.css -->
     <!-- bower:css -->
     <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css" />
     <!-- endbower -->
   <!-- endbuild -->
-  <link rel="stylesheet" href="main.css" />
-  <!--build:css styles/style.min.css -->
+  <!-- build:css(.tmp) styles/style.min.css -->
     <!-- inject:css -->
+    <link rel="stylesheet" href="styles/main.css">
     <!-- endinject -->
   <!-- endbuild -->
 </head>
 
 <body>
   <h1>ALLO HORYUJI <span class="glyphicon glyphicon-thumbs-up"></span></h1>
-  <div class="contents"></div>
-  <!--build:js scripts/vendor.min.js -->
+  <div class="contents">
+    <img src="assets/es6.png" alt="es6" />
+  </div>
+  <!-- build:js scripts/vendor.min.js -->
     <!-- bower:js -->
     <script src="/bower_components/jquery/dist/jquery.js"></script>
     <script src="/bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <!-- endbower -->
   <!-- endbuild -->
-  <script src="scripts/main.js"></script>
-  <!--build:js scripts/main.min.js -->
+  <!-- build:js(.tmp) scripts/main.min.js -->
     <!-- inject:js -->
+    <script src="scripts/main.js"></script>
     <!-- endinject -->
   <!-- endbuild -->
 </body>
