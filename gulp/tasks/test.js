@@ -10,7 +10,7 @@ gulp.task('test', () => {
   server.start();
 });
 
-gulp.task('test:watch', () => {
+gulp.task('test:watch', ['report:coverage'], () => {
   const server = new Server({
     configFile: process.cwd() + '/karma.conf.js',
     singleRun: false,

@@ -26,6 +26,11 @@ const BROWSER_SYNC = {
     },
   },
   report: {
+    notify: true,
+    files: [
+      /** match pattern : https://github.com/es128/anymatch  */
+      new RegExp(`${PATHS.report.coverage}/*\.(js|css|html)`),
+    ],
     server: {
       baseDir: `${PATHS.report.coverage}`,
       port: PORTS.report,

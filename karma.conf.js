@@ -61,14 +61,13 @@ module.exports = function(karmaConfig) {
       },
       reporters: [{
         type: 'text',
+        dir: config.paths.report.coverage,
         subdir: normalizationBrowserName,
-      }
-      /* 落ちるので一時的にコメントアウト
-      *, {
+      }, {
         type: 'html',
         dir: config.paths.report.coverage,
         subdir: normalizationBrowserName,
-      }*/],
+      }],
     },
 
 
