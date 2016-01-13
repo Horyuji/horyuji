@@ -22,8 +22,11 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-/** iconfont:start */
-/** iconfont:end */
+h2 {
+  color: red;
+}
 
+/** iconfont:start */
 .icon-star:before { content: "\EA01" }
 .icon-play:before { content: "\EA02" }
+/** iconfont:end */

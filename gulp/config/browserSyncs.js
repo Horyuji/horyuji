@@ -13,6 +13,7 @@ const BROWSER_SYNC = {
     files: [
       /** match pattern : https://github.com/es128/anymatch  */
       new RegExp(`${ROOT_DIRS.src}/*\.html`),
+      new RegExp(`${ROOT_DIRS.src}/*\.(css|svg|eot|ttf|woff)`),
       new RegExp(`${ROOT_DIRS.tmp}/*\.(js|css|html)`),
     ],
     server: {
