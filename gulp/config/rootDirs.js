@@ -4,6 +4,7 @@ const ROOT_DIRS = {
   dist: `${cwd}/dist`,
   gulp: `${cwd}/gulp`,
   report: `${cwd}/report`,
+  iconfont: `${cwd}/iconfont`,
   src: `${cwd}/src`,
   tmp: `${cwd}/.tmp`,
   bower: `${cwd}/bower_components`,

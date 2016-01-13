@@ -27,3 +27,21 @@ gulp.task('inject:css', () => gulp.src(config.paths.html.src)
     transform: (filepath) => '<link rel="stylesheet" href="' + filepath.replace('/.tmp/', '') + '">',
   }))
   .pipe(gulp.dest(config.rootDirs.src)));
+
+/****/
+
+gulp.task('inject:iconfont', () => gulp.src(config.paths.iconfont.css)
+    .pipe(inject(gulp.src([config.paths.iconfont.svg],
+      {read: false}), {
+      starttag: '/** iconfont:start */',
+      endtag: '/** iconfont:end */',
+    transform: function (filepath, file, i, length) {
+
+      var unicode = file.split('-')[0].replace(/^u/,'\\');
+      var iconName = file.split('-')[1].split('.')[0];
+      console.log('inject:iconfont', unicode, iconName);
+
+      return `.icon-${iconName}:before { content: "${unicode}" }`;
+    }
+  }))
+    .pipe(gulp.dest(config.rootDirs.src)));
