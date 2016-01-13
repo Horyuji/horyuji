@@ -17,6 +17,8 @@ const description = {
     'help:all': '内部コマンドを含むすべてのコマンドを表示します',
     'help:dep': 'コマンド毎の依存性を表示します',
     html: 'htmlファイルのビルド処理を行います',
+    iconfont: 'iconfont/svgフォルダにあるsvgよりiconfontを作成します',
+    'inject:iconfont': 'src/assets/css/iconfont.cssにオリジナルiconfontを埋め込みます',
     'report:coverage': '単体テスト結果よりカバレッジを出力します',
     serve: '開発用Webサーバーを起動します',
     test: 'karmaによる単体テストを実行します',
