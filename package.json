@@ -65,5 +65,8 @@
     "stylelint": "^3.1.4",
     "stylelint-config-suitcss": "^2.0.0",
     "wiredep": "^3.0.0"
+  },
+  "dependencies": {
+    "gulp-rename": "^1.2.2"
   }
 }

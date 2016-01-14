@@ -54,7 +54,7 @@ gulp.task('build:client', () => {
     .pipe(htmlExcludeFilter)
     .pipe(rev())
     .pipe(htmlExcludeFilter.restore)
-    .pipe(revReplace({manifest: manifest}))
+    .pipe(revReplace({ manifest: manifest }))
     .pipe(gulp.dest(config.rootDirs.dist));
 
 });
