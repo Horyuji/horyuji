@@ -1,0 +1,18 @@
+<?xml version="1.0" standalone="no"?> 
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
+<svg xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <font id="myfont" horiz-adv-x="1000">
+    <font-face font-family="myfont"
+      units-per-em="800" ascent="800"
+      descent="0" />
+    <missing-glyph horiz-adv-x="0" />
+    <glyph glyph-name="star"
+      unicode="&#xEA01;"
+      horiz-adv-x="1000" d=" M150 550L150 550H400L500 750L600 550H850L650 400L800 150L500 300L200 150L350 400" />
+    <glyph glyph-name="play"
+      unicode="&#xEA02;"
+      horiz-adv-x="800" d=" M156.5 679.5L359.051 562.557L561.603 445.614L359.051 328.671L156.5 211.728L156.5 445.614z M156.5 679.5L359.051 562.557L561.603 445.614L359.051 328.671L156.5 211.728L156.5 445.614z M561.603 679.5L633.603 679.5L633.603 211.728L561.603 211.728L561.603 679.5z M561.603 679.5L633.603 679.5L633.603 211.728L561.603 211.728L561.603 679.5z" />
+  </font>
+</defs>
+</svg>

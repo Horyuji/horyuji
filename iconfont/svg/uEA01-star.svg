@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="1000" height="800">
+	<path d="M150 250 L150 250 H400 L500 50 L600 250 H850 L650 400 L800 650 L500 500 L200 650 L350 400"></path>
+</svg>

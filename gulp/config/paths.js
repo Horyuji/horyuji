@@ -34,6 +34,13 @@ const PATHS = {
       `${ROOT_DIRS.src}/**/*.html`,
     ],
   },
+  iconfont: {
+    svg: [
+      `${ROOT_DIRS.iconfont}/**/*.svg`,
+    ],
+    css: `${ROOT_DIRS.src}/assets/css/*.css`,
+    dist: `${ROOT_DIRS.src}/assets/css`,
+  },
   bower: {
     watch: 'bower.json',
   },
