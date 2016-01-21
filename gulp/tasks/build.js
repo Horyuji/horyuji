@@ -11,7 +11,9 @@ const postcss = require('gulp-postcss');
 
 gulp.task('build', cb => {
   runSequence(
-    'clean:build', ['html:build', 'js:build', 'style:build', 'image:build', 'extras:build'],
+    'clean:build',
+    'inject:iconfont',
+    ['html:build', 'js:build', 'style:build', 'image:build', 'extras:build', 'bower:font_build'],
     'inject',
     'bower',
     'build:client',

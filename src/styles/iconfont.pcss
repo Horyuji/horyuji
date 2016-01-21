@@ -1,0 +1,32 @@
+@font-face {
+  font-family: "myfont";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../assets/fonts/myfont.eot");
+  src: url("../assets/fonts/myfont.eot?#iefix") format("eot"),
+       url("../assets/fonts/myfont.woff") format("woff"),
+       url("../assets/fonts/myfont.ttf") format("truetype"),
+       url("../assets/fonts/myfont.svg#icon") format("svg");
+  unicode-range:
+    /** iconrange:start */
+    U+EA01,
+    U+EA02,
+    /** iconrange:end */
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  font-family: "myfont";
+  font-smoothing: antialiased | grayscale;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  line-height: 1;
+  speak: none;
+  text-transform: none;
+
+}
+
+/** iconfont:start */
+.icon-star::before { content: "\EA01"; }
+.icon-play::before { content: "\EA02"; }
+/** iconfont:end */
