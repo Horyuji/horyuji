@@ -7,7 +7,7 @@ const wiredep = require('wiredep').stream;
 const bowerJson = require(`${process.cwd()}/bower.json`);
 
 const readRcFile = (file)=>
- new Promise((resolve, reject)=> fs.readFile(file, (e,data)=> e?reject(e):resolve(data)))
+ new Promise((resolve, reject)=> fs.readFile(file, (e, data)=> e ? reject(e) : resolve(data)))
    .then(JSON.parse)
    .catch(e=> console.error(e));
 
@@ -31,9 +31,9 @@ gulp.task('bower:font_build', () => {
         .map(bowerConf=> bowerJson.overrides[bowerConf].main
           .filter(file=> fontMatc.test(file))
           .map(file=> path.join(process.cwd(), bowerDir, bowerConf, file))
-        ).reduce((pre,val)=> pre.concat(val));
+        ).reduce((pre, val)=> pre.concat(val));
 
       return gulp.src(fontFiles)
-        .pipe(gulp.dest(config.paths.font.dest));
-    })
+        .pipe(gulp.dest(config.paths.font.dist));
+    });
 });

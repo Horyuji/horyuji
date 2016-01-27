@@ -42,7 +42,10 @@ const PATHS = {
     dist: `${ROOT_DIRS.src}/assets/css`,
   },
   font: {
-    dest: `${ROOT_DIRS.dist}/assets/font`,
+    dist: `${ROOT_DIRS.dist}/fonts`,
+    src: [
+      `${ROOT_DIRS.src}/fonts/*.?(svg|ttf|eot|woff|woff2)`,
+    ],
   },
   bower: {
     watch: 'bower.json',

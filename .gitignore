@@ -42,4 +42,4 @@ node_modules
 /docs
 /dist
 bower_components
-/src/assets/fonts/*
+/src/fonts/*

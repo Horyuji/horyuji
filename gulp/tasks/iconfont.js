@@ -8,10 +8,10 @@ gulp.task('iconfont', ()=> {
     .pipe(iconfont({
       fontName: 'myfont',
       appendUnicode: true,
-      formats: ['svg', 'ttf', 'eot', 'woff'],
+      formats: ['svg', 'ttf', 'eot', 'woff', 'woff2'],
     }))
       .on('glyphs', (glyphs, options)=> {
         console.log(glyphs, options);
       })
-    .pipe(gulp.dest(`${process.cwd()}/src/assets/fonts/`));
+    .pipe(gulp.dest(`${process.cwd()}/src/fonts/`));
 });

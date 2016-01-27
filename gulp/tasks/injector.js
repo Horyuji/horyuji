@@ -8,7 +8,7 @@ const runSequence = require('run-sequence');
 const replaceDir = {
   src: (dir)=> dir.replace(/\/src\//, ''),
   tmp: (dir)=> dir.replace(/^\/\.tmp\//, ''),
-  src_tmp: (dir)=> replaceDir.tmp(replaceDir.src(dir)),
+  all: (dir)=> replaceDir.tmp(replaceDir.src(dir)),
 };
 
 gulp.task('inject', cb => {
@@ -21,7 +21,7 @@ gulp.task('inject:js', () => gulp.src(config.paths.html.src)
   ], {
     read: false,
   }), {
-    transform: (filepath) => `<script src="${replaceDir.src_tmp(filepath)}"></script>`,
+    transform: (filepath) => `<script src="${replaceDir.all(filepath)}"></script>`,
   }))
   .pipe(gulp.dest(config.rootDirs.src)));
 
@@ -32,7 +32,7 @@ gulp.task('inject:css', () => gulp.src(config.paths.html.src)
     read: false,
   }), {
     transform: (filepath) =>
-      `<link rel="stylesheet" href="${replaceDir.src_tmp(filepath)}">`,
+      `<link rel="stylesheet" href="${replaceDir.all(filepath)}">`,
   }))
   .pipe(gulp.dest(config.rootDirs.src)));
 
@@ -48,13 +48,13 @@ gulp.task('inject:iconfont', ['iconfont'], () => gulp.src(config.paths.iconfont.
       var unicode = filename.split('-')[0].replace(/^u/, '\\');
       var iconName = filename.split('-')[1];
       return `.icon-${iconName}::before { content: "${unicode}"; }`;
-    },}))
+    }, }))
     .pipe(inject(gulp.src(config.paths.iconfont.svg,
       { read: false }), {
         starttag: '/** iconrange:start */',
         endtag: '/** iconrange:end */',
         transform: function(filepath, file, i, length) {
       var filename = path.basename(filepath, '.svg');
-      return `${filename.split('-')[0].replace(/^u/, 'U+')},`
-    },}))
+      return `${filename.split('-')[0].replace(/^u/, 'U+')},`;
+    }, }))
     .pipe(gulp.dest(config.paths.iconfont.dist)));
