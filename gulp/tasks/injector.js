@@ -43,18 +43,18 @@ gulp.task('inject:iconfont', ['iconfont'], () => gulp.src(config.paths.iconfont.
       { read: false }), {
         starttag: '/** iconfont:start */',
         endtag: '/** iconfont:end */',
-        transform: function(filepath, file, i, length) {
-      var filename = path.basename(filepath, '.svg');
-      var unicode = filename.split('-')[0].replace(/^u/, '\\');
-      var iconName = filename.split('-')[1];
-      return `.icon-${iconName}::before { content: "${unicode}"; }`;
-    }, }))
+        transform: (filepath, file, i, length) => {
+          var filename = path.basename(filepath, '.svg');
+          var unicode = filename.split('-')[0].replace(/^u/, '\\');
+          var iconName = filename.split('-')[1];
+          return `.icon-${iconName}::before { content: "${unicode}"; }`;
+        }, }))
     .pipe(inject(gulp.src(config.paths.iconfont.svg,
       { read: false }), {
         starttag: '/** iconrange:start */',
         endtag: '/** iconrange:end */',
-        transform: function(filepath, file, i, length) {
-      var filename = path.basename(filepath, '.svg');
-      return `${filename.split('-')[0].replace(/^u/, 'U+')},`;
-    }, }))
+        transform: (filepath, file, i, length) => {
+          var filename = path.basename(filepath, '.svg');
+          return `${filename.split('-')[0].replace(/^u/, 'U+')},`;
+        }, }))
     .pipe(gulp.dest(config.paths.iconfont.dist)));
