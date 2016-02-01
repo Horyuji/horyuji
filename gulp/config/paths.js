@@ -38,8 +38,14 @@ const PATHS = {
     svg: [
       `${ROOT_DIRS.iconfont}/**/*.svg`,
     ],
-    css: `${ROOT_DIRS.src}/assets/css/*.css`,
+    css: `${ROOT_DIRS.src}/assets/css/*.pcss`,
     dist: `${ROOT_DIRS.src}/assets/css`,
+  },
+  font: {
+    dist: `${ROOT_DIRS.dist}/fonts`,
+    src: [
+      `${ROOT_DIRS.src}/fonts/*.?(svg|ttf|eot|woff|woff2)`,
+    ],
   },
   bower: {
     watch: 'bower.json',

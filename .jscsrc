@@ -1,7 +1,11 @@
 
 {
-    "preset": "airbnb",
-    "requireCurlyBraces": null,
-    "validateIndentation": 2,
-    "esnext": true
+  "preset": "airbnb",
+  "requireCurlyBraces": null,
+  "validateIndentation": 2,
+  "esnext": true,
+  "requireSpacesInFunctionExpression": null,
+  "requireSpacesInFunctionDeclaration": null,
+  "disallowSpacesInFunctionDeclaration": null,
+  "requireSpacesInsideParentheses": null
 }

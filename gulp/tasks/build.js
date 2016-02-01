@@ -9,14 +9,24 @@ const rev = require('gulp-rev');
 const revReplace = require('gulp-rev-replace');
 const postcss = require('gulp-postcss');
 
+const debug = require('gulp-debug');
+
 gulp.task('build', cb => {
   runSequence(
-    'clean:build', ['html:build', 'js:build', 'style:build', 'image:build', 'extras:build'],
+    'clean:build',
+    'inject:iconfont',
+    ['html:build', 'js:build', 'style:build', 'image:build', 'extras:build', 'bower:font_build'],
     'inject',
     'bower',
     'build:client',
+    'build:font_copy',
     cb
   );
+});
+
+gulp.task('build:font_copy', ()=> {
+  return gulp.src(config.paths.font.src)
+    .pipe(gulp.dest(config.paths.font.dist));
 });
 
 gulp.task('build:client', () => {
